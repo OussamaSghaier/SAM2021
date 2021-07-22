@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="CD"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Account"/>
+   <type name="account"/>
+   <type name="Affiliate"/>
+   <type name="ATM"/>
+   <type name="atms"/>
+   <type name="Bank"/>
+   <type name="bank"/>
+   <type name="Branch"/>
+   <type name="branches"/>
+   <type name="CD"/>
+   <type name="CheckingAccount"/>
+   <type name="client"/>
+   <type name="clients"/>
+   <type name="double"/>
+   <type name="Employee"/>
+   <type name="employees"/>
+   <type name="FullTimeEmployee"/>
+   <type name="interestRate"/>
+   <type name="Loan"/>
+   <type name="loan"/>
+   <type name="name"/>
+   <type name="PartTimeEmployee"/>
+   <type name="RetirementAccount"/>
+   <type name="SavingsAccount"/>
+   <type name="string"/>
+   <type name="Transaction"/>
+   <type name="transactions"/>
+   <type name="univ"/>
+   <set name="$Exp1_cd" type="CD"/>
+   <set name="$initialConditions_cdg" type="associationEnd"/>
+   <set name="$initialConditions_cdg&apos;" type="associationEnd"/>
+</node>
+
+<node numberatoms="no">
+   <type name="seq/Int"/>
+</node>
+
+<node visible="no">
+   <type name="associationEnd"/>
+   <type name="Client"/>
+   <type name="Entity"/>
+   <type name="Int"/>
+   <type name="String"/>
+</node>
+
+<node visible="no" color="Blue">
+   <type name="FName"/>
+</node>
+
+<node visible="no" showlabel="no">
+   <set name="$initialConditions_cd" type="Obj"/>
+</node>
+
+<node visible="yes" color="Gray">
+   <type name="Obj"/>
+</node>
+
+<node visible="yes" color="Green">
+   <type name="Val"/>
+</node>
+
+<node visible="yes" showlabel="no">
+   <set name="classes" type="Obj"/>
+</node>
+
+<edge color="Blue" label="association">
+   <relation name="asso"> <type name="Obj"/> <type name="FName"/> <type name="Obj"/> </relation>
+</edge>
+
+<edge color="Green" visible="yes" label="feature">
+   <relation name="features"> <type name="Obj"/> <type name="FName"/> <type name="Val"/> </relation>
+</edge>
+
+<edge color="Red" label="extends">
+   <relation name="extensions"> <type name="Obj"/> <type name="Obj"/> </relation>
+</edge>
+
+<edge color="Red" visible="no">
+   <relation name="associations"> <type name="associationEnd"/> <type name="associationEnd"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="class"> <type name="associationEnd"/> <type name="Obj"/> </relation>
+   <relation name="label"> <type name="associationEnd"/> <type name="FName"/> </relation>
+   <relation name="lowerBound"> <type name="associationEnd"/> <type name="Int"/> </relation>
+   <relation name="type"> <type name="associationEnd"/> <type name="String"/> </relation>
+   <relation name="upperBound"> <type name="associationEnd"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
